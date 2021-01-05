@@ -10,7 +10,7 @@ namespace Xenial.Framework.Win.Model.GeneratorUpdaters
     /// Implements the <see cref="Xenial.Framework.Model.GeneratorUpdaters.ModelOptionsNodesGeneratorUpdater" />
     /// </summary>
     /// <seealso cref="Xenial.Framework.Model.GeneratorUpdaters.ModelOptionsNodesGeneratorUpdater" />
-    public class ModelOptionsWinNodesGeneratorUpdater : ModelOptionsNodesGeneratorUpdater
+    public sealed class ModelOptionsWinNodesGeneratorUpdater : ModelOptionsNodesGeneratorUpdater
     {
         /// <summary>
         /// Gets the options.
