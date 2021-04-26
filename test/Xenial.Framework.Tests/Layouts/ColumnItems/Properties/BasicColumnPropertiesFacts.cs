@@ -23,7 +23,7 @@ namespace Xenial.Framework.Tests.Layouts.ColumnItems.Properties
         public static void ColumnPropertiesTests() => Describe(nameof(Column), () =>
         {
             var faker = new Faker();
-            FDescribe("Properties", () =>
+            Describe("Properties", () =>
             {
                 It($"{nameof(IModelColumn)}", () =>
                 {

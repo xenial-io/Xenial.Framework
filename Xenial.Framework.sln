@@ -80,6 +80,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Badges", "Badges", "{95170A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{3250CF49-8628-4C4F-88ED-27DD99F2D420}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xenial.Framework.SourceGenerators", "src\Xenial.Framework.SourceGenerators\Xenial.Framework.SourceGenerators.csproj", "{F720FD91-0612-4825-B93D-4DFAB5898DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -330,6 +332,18 @@ Global
 		{060AE15E-BDAC-476D-9270-D6D72FFD70D1}.Release|x64.Build.0 = Release|Any CPU
 		{060AE15E-BDAC-476D-9270-D6D72FFD70D1}.Release|x86.ActiveCfg = Release|Any CPU
 		{060AE15E-BDAC-476D-9270-D6D72FFD70D1}.Release|x86.Build.0 = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|x64.Build.0 = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Debug|x86.Build.0 = Debug|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|x64.ActiveCfg = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|x64.Build.0 = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|x86.ActiveCfg = Release|Any CPU
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -363,6 +377,7 @@ Global
 		{6EBFDA1F-6500-416D-80CD-5CE510EF7D8D} = {AB69777C-A497-434A-A4A3-30BF7C1EF4A6}
 		{95170AD6-A968-4C6F-A6F3-008B32D470FA} = {6EBFDA1F-6500-416D-80CD-5CE510EF7D8D}
 		{3250CF49-8628-4C4F-88ED-27DD99F2D420} = {AB69777C-A497-434A-A4A3-30BF7C1EF4A6}
+		{F720FD91-0612-4825-B93D-4DFAB5898DA6} = {BBC9F78B-FCA3-4E8B-BE69-DFF8533377E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7E850AC-B423-49A9-8D5E-6B21CA22F615}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
+using Xenial.Framework.Tests.Generators;
 using Xenial.Framework.Tests.Layouts.ColumnItems;
 using Xenial.Framework.Tests.Layouts.ColumnItems.Properties;
 using Xenial.Framework.Tests.Layouts.Items;
@@ -21,6 +22,8 @@ namespace Xenial.Framework.Tests
         {
             Describe(nameof(Xenial), () =>
             {
+                SourceGeneratorFacts.SourceGeneratorTests();
+
                 NullDiffsStoreFacts.NullDiffsStoreTests();
                 ModelOptionsNodesGeneratorUpdaterFacts.ModelOptionsNodesGeneratorUpdaterTests();
                 ModuleTypeListExtentionsFacts.ModuleTypeListExtentionsTests();

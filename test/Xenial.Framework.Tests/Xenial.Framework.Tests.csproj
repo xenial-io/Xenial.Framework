@@ -9,7 +9,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Xenial.Framework\Xenial.Framework.csproj" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" PrivateAssets="All" />
   </ItemGroup>
-  
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Xenial.Framework\Xenial.Framework.csproj" />
+    <ProjectReference Include="..\..\src\Xenial.Framework.SourceGenerators\Xenial.Framework.SourceGenerators.csproj" />
+  </ItemGroup>
+
 </Project>
