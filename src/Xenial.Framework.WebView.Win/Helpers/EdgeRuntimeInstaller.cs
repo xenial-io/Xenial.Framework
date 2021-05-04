@@ -92,7 +92,7 @@ Do you want to download and install it now?
             {
                 await control.EnsureCoreWebView2Async();
             }
-            catch (EdgeNotFoundException ex)
+            catch (WebView2RuntimeNotFoundException ex)
             {
                 Tracing.LogError(new Guid("369655EA-E64B-45C6-8481-6098F7D96183"), ex);
                 if (await DownloadAndInstallWebView2Runtime())
