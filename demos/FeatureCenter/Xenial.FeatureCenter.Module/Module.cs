@@ -45,7 +45,7 @@ namespace Xenial.FeatureCenter.Module
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()
             => base.GetDeclaredControllerTypes()
-                .UseSingletonController().Concat(new[]
+                .UseXenialSingletonControllers().Concat(new[]
                 {
                     typeof(BadgesFeatureController)
                 });

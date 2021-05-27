@@ -53,7 +53,7 @@ namespace Xenial.FeatureCenter.Module
                 ? "Hides badges from the navigation panel"
                 : "Shows badges in the navigation panel";
 
-            var adornerWindowsFormsCustomizeNavigationController = Frame.GetController<BadgesNavigationWindowControllerBase>();
+            var adornerWindowsFormsCustomizeNavigationController = Frame.GetController<XenialBadgesNavigationWindowControllerBase>();
 
             if (adornerWindowsFormsCustomizeNavigationController is not null)
             {
@@ -62,7 +62,7 @@ namespace Xenial.FeatureCenter.Module
 
             if (Application is not null && Application.MainWindow is not null)
             {
-                var mainWindowadornerWindowsFormsCustomizeNavigationController = Application.MainWindow.GetController<BadgesNavigationWindowControllerBase>();
+                var mainWindowadornerWindowsFormsCustomizeNavigationController = Application.MainWindow.GetController<XenialBadgesNavigationWindowControllerBase>();
                 if (mainWindowadornerWindowsFormsCustomizeNavigationController is not null)
                 {
                     mainWindowadornerWindowsFormsCustomizeNavigationController.Active[nameof(ToggleBadgesSimpleAction)] = showBadges;

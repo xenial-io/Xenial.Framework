@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFrameworks>$(NetBlazorLibVersion)</TargetFrameworks>
+    <TargetFrameworks>$(XenialBlazorTFMs)</TargetFrameworks>
     <DxExtendStartupHost>false</DxExtendStartupHost>
     <RazorLangVersion>$(RazorLangVersion)</RazorLangVersion>
   </PropertyGroup>
