@@ -19,6 +19,7 @@ using Xenial.FeatureCenter.Module.Updaters;
 using Xenial.Framework;
 using Xenial.Framework.Badges;
 using Xenial.Framework.StepProgressEditors;
+using Xenial.Framework.SystemModule;
 using Xenial.Framework.TokenEditors;
 using Xenial.Framework.WebView;
 
@@ -47,7 +48,8 @@ namespace Xenial.FeatureCenter.Module
             => base.GetDeclaredControllerTypes()
                 .UseXenialSingletonControllers().Concat(new[]
                 {
-                    typeof(BadgesFeatureController)
+                    typeof(BadgesFeatureController),
+                    typeof(XenialCopyLayoutCodeViewController)
                 });
 
         public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB)
@@ -60,6 +62,8 @@ namespace Xenial.FeatureCenter.Module
         public override void AddGeneratorUpdaters(ModelNodesGeneratorUpdaters updaters)
         {
             base.AddGeneratorUpdaters(updaters);
+
+            _ = updaters ?? throw new ArgumentNullException(nameof(updaters));
 
             updaters.Add(new FeatureCenterNavigationItemNodesUpdater());
 
@@ -152,7 +156,6 @@ namespace Xenial.FeatureCenter.Module
 
             #endregion
 
-
             #region Badges
 
             typesInfo
@@ -166,7 +169,7 @@ namespace Xenial.FeatureCenter.Module
             #endregion
         }
 
-        public static string[] VersionInformation = new[]
+        public static IEnumerable<string> VersionInformation { get; } = new[]
         {
             $"Xenial: {XenialVersion.Version}/{XenialVersion.Branch}",
             $"Demo: {XenialVersion.Version}/{XenialVersion.Branch}",
