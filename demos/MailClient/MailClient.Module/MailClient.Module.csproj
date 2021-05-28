@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="MailKit" Version="2.10.1" />
     <PackageReference Include="MimeKit" Version="2.10.1" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="$(DxVersion)" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="$(DxPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == '$(NetStandardVersion)' OR '$(TargetFramework)' == '$(NetStandard2_1Version)' OR '$(TargetFramework)' == '$(FullFrameworkVersion)'">

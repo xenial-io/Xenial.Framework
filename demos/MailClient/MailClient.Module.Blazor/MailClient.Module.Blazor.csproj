@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.ExpressApp.Validation.Blazor" Version="$(DxVersion)" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Blazor" Version="$(DxPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(XenialDebug)' == 'false'">

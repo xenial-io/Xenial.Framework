@@ -7,13 +7,13 @@
     <Copyright>Copyright $([System.Char]::ConvertFromUtf32(169)) Xenial, Manuel Grundner 2019-$([System.DateTime]::Today.ToString('yyyy'))</Copyright>
     <Authors>Xenial, Manuel Grundner</Authors>
     <FullFrameworkVersion>net462</FullFrameworkVersion>
+    <WindowsFrameworkVersion>net5.0-windows</WindowsFrameworkVersion>
     <NetStandardVersion>netstandard2.0</NetStandardVersion>
     <NetStandard2_1Version>netstandard2.1</NetStandard2_1Version>
     <NetCoreVersion>netcoreapp3.1</NetCoreVersion>
     <Net5Version>net5.0</Net5Version>
-    <NetBlazorLibVersion>$(NetStandard2_1Version);$(Net5Version)</NetBlazorLibVersion>
+    <NetBlazorLibVersion>$(Net5Version)</NetBlazorLibVersion>
     <NetBlazorAppVersion>$(Net5Version)</NetBlazorAppVersion>
-    <TargetFrameworks>$(NetStandardVersion);$(FullFrameworkVersion);$(Net5Version)</TargetFrameworks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <PackageOutputPath>$(MSBuildThisFileDirectory)artifacts\nuget</PackageOutputPath>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -37,16 +37,25 @@
     <Nullable>enable</Nullable>
     <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)CodeFormatting.ruleset</CodeAnalysisRuleSet>
-    <DxVersion>20.2.7</DxVersion>
-    <!-- <XenialVersion>20204.0.1</XenialVersion> -->
+    <DxVersion>21.1.3</DxVersion>
     <XenialVersion>$(PackageVersion)</XenialVersion>
-    <DxPackageVersion>$(DxVersion)</DxPackageVersion>
+    <AspNetCoreVersion>5.0.2</AspNetCoreVersion>
+    <!-- <DxPackageVersion>[21.1.3-beta]</DxPackageVersion> -->
+    <DxPackageVersion>[$(DxVersion)]</DxPackageVersion>
     <XenialPackageVersion>$(XenialVersion)</XenialPackageVersion>
     <XenialDemoPackageVersion>
     </XenialDemoPackageVersion>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <!-- Xenial Default Package Version -->
+    <XenialTFMs>$(NetStandardVersion);$(FullFrameworkVersion);$(Net5Version)</XenialTFMs>
+    <XenialWinTFMs>$(FullFrameworkVersion);$(WindowsFrameworkVersion)</XenialWinTFMs>
+    <XenialBlazorTFMs>$(NetBlazorLibVersion)</XenialBlazorTFMs>
+
+    <TargetFrameworks>$(XenialTFMs)</TargetFrameworks>
+
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
     <TargetFrameworks>$(NetStandardVersion);$(Net5Version)</TargetFrameworks>
   </PropertyGroup>
@@ -67,6 +76,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="$(DxVersion) &gt; 20.2.5">
     <DefineConstants>$(DefineConstants);DX_GT_20_2_5</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DxVersion) &gt; 21.1.1">
+    <DefineConstants>$(DefineConstants);DX_GT_21_1_1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DxVersion) &gt; 21.1.2">
+    <DefineConstants>$(DefineConstants);DX_GT_21_1_2</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(DxVersion) &gt; 21.1.3">
+    <DefineConstants>$(DefineConstants);DX_GT_21_1_3</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)img\icon-64x64.png" Pack="true" PackagePath="\" Visible="false" />

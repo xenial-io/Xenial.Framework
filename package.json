@@ -19,7 +19,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "dotnet run --project build/Xenial.Build/Xenial.Build.csproj"
+      "pre-push": "dotnet run --project build/build.csproj"
     }
   }
 }
