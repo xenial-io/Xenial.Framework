@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Linq;
 
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
@@ -8,7 +9,7 @@ using DevExpress.ExpressApp.Model;
 
 namespace Xenial.Framework.SystemModule
 {
-    public class XenialCopyLayoutCodeViewController : ViewController<DetailView>
+    public sealed class XenialCopyLayoutCodeViewController : ViewController<DetailView>
     {
         private const string actionCategory = "Diagnostic";
         public SimpleAction CopyLayoutCodeSimpleAction { get; }
@@ -26,6 +27,8 @@ namespace Xenial.Framework.SystemModule
         {
             var writer = new ModelXmlWriter();
             var xml = writer.WriteToString(View.Model, 0);
+            var document = XDocument.Parse(xml);
+
 
         }
     }

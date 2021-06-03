@@ -3,8 +3,9 @@
   <PropertyGroup>
     <NoWarn>IDE0079;$(NoWarn)</NoWarn>
   </PropertyGroup>
-    
+
   <ItemGroup>
+    <EmbeddedResource Include="Layouts\Items\Tree\SimpleDetailView.txt" />
     <EmbeddedResource Include="Utils\TestResources\TestEmbeddedResource.txt" />
   </ItemGroup>
 

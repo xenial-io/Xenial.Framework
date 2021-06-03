@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 
 #pragma warning disable CA1032 //By design
@@ -17,7 +18,8 @@ namespace Xenial.Framework.Utils
         /// </summary>
         /// <param name="assembly">The assembly.</param>
         /// <param name="resourceName">Name of the resource.</param>
-        public ResourceNotFoundException(Assembly assembly, string? resourceName) : base($"Resource '{resourceName}' was not found in Assembly '{assembly?.GetName()?.Name}'")
+        public ResourceNotFoundException(Assembly assembly, string? resourceName)
+            : base($"Resource '{resourceName}' was not found in Assembly '{assembly?.GetName()?.Name}'{Environment.NewLine}Possible Resources:{Environment.NewLine}{string.Join(Environment.NewLine, assembly?.GetManifestResourceNames().Select(r => "\t" + r))}")
         {
             Assembly = assembly ?? throw new ArgumentNullException(nameof(assembly));
             ResourceName = resourceName;

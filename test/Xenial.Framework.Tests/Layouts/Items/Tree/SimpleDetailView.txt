@@ -1,0 +1,18 @@
+﻿<DetailView Id="ModelBuilderIntroductionDemo_DetailView" ClassName="Xenial.FeatureCenter.Module.BusinessObjects.ModelBuilders.ModelBuilderIntroductionDemo">
+  <Items>
+    <PropertyEditor Id="Installation" PropertyName="Installation" Caption="Installation" />
+    <PropertyEditor Id="Introduction" PropertyName="Introduction" Caption="Introduction" />
+  </Items>
+  <Layout>
+    <LayoutGroup Id="Main">
+      <TabbedGroup Id="@5a25d738-d21d-435f-9d04-9ed7d1a7f613" Direction="Vertical" Index="0">
+        <LayoutGroup Id="Introduction" ShowCaption="True" Caption="Introduction" Direction="Vertical" ImageName="Text" Index="0">
+          <LayoutItem Id="Introduction" ViewItem="Introduction" Index="0" />
+        </LayoutGroup>
+        <LayoutGroup Id="Installation" ShowCaption="True" Caption="Installation" Direction="Vertical" ImageName="ShipmentReceived" Index="1">
+          <LayoutItem Id="Installation" ViewItem="Installation" Index="0" />
+        </LayoutGroup>
+      </TabbedGroup>
+    </LayoutGroup>
+  </Layout>
+</DetailView>

@@ -35,7 +35,6 @@ namespace Xenial.Framework.Utils
 #else
             path = path.Replace("/", ".").Replace("\\", ".");
 #endif
-
             var fullPath = $"{name}.{path}";
             var stream = assembly.GetManifestResourceStream(fullPath);
 
