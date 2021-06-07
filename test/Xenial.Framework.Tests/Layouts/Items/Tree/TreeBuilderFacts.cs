@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
+using Xenial.Framework.Layouts.Items.Base;
 using Xenial.Framework.Tests.Assertions;
 using Xenial.Framework.Utils;
 
@@ -31,7 +32,7 @@ namespace Xenial.Framework.Tests.Layouts.Items
                 {
                     Name = "BuildLayout",
                     Attributes = MemberAttributes.Public | MemberAttributes.Final | MemberAttributes.Static,
-                    ReturnType = new CodeTypeReference("Layout")
+                    ReturnType = new CodeTypeReference(typeof(Layout).FullName)
                 };
                 var provider = new Microsoft.CSharp.CSharpCodeProvider();
                 if (true)
