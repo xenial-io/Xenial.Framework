@@ -34,12 +34,20 @@ namespace Xenial.Framework.Tests.Layouts.Items
                     Attributes = MemberAttributes.Public | MemberAttributes.Final | MemberAttributes.Static,
                     ReturnType = new CodeTypeReference(typeof(Layout).FullName)
                 };
+
+                var @ref = new CodeObjectCreateExpression(new CodeTypeReference(typeof(Layout).FullName));
+
+                var layout = new CodeMethodReturnStatement(@ref);
+
+                method.Statements.Add(layout);
+
                 var provider = new Microsoft.CSharp.CSharpCodeProvider();
                 if (true)
                 {
                     var writer = new StringWriter();
                     provider.GenerateCodeFromMember(method, writer, new CodeGeneratorOptions
                     {
+                        BracingStyle = "C" //New line style
                     });
 
                     throw new Exception(writer.ToString());
