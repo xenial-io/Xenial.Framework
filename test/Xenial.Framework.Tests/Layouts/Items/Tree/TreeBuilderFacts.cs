@@ -1,6 +1,10 @@
 ﻿using System;
+using System.CodeDom;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +26,24 @@ namespace Xenial.Framework.Tests.Layouts.Items
                 var xml = ResourceUtil.GetResourceString(typeof(TreeBuilderFacts),
                     "Layouts/Items/Tree/SimpleDetailView.txt"
                 );
+
+                var method = new CodeMemberMethod()
+                {
+                    Name = "BuildLayout",
+                    Attributes = MemberAttributes.Public | MemberAttributes.Final | MemberAttributes.Static,
+                    ReturnType = new CodeTypeReference("Layout")
+                };
+                var provider = new Microsoft.CSharp.CSharpCodeProvider();
+                if (true)
+                {
+                    var writer = new StringWriter();
+                    provider.GenerateCodeFromMember(method, writer, new CodeGeneratorOptions
+                    {
+                    });
+
+                    throw new Exception(writer.ToString());
+                }
+                return false;
             });
 
             It("builds simple tree structure with record syntax", () =>

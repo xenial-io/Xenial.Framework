@@ -8,4 +8,8 @@
     <PackageReference Include="DevExpress.ExpressApp" Version="$(DxPackageVersion)" />
   </ItemGroup>
 
+  <ItemGroup Condition="$(TargetFramework) != '$(FullFrameworkVersion)'">
+    <PackageReference Include="System.CodeDom" Version="5.0.0" />
+  </ItemGroup>
+
 </Project>
